@@ -1,8 +1,10 @@
 defmodule CommonStandardsProject.Jurisdiction do
   use CommonStandardsProject.Web, :model
 
+  @primary_key {:id, :string, autogenerate: false}
   schema "jurisdictions" do
     field :title, :string
+    field :type, :string
 
     timestamps
   end

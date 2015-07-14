@@ -28,8 +28,6 @@ config :logger, :console, format: "[$level] $message\n"
 
 # Configure your database
 config :common_standards_project, CommonStandardsProject.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "common_standards_project_dev",
-  size: 10 # The amount of database connections in the pool
+  adapter: Mongo.Ecto,
+  database: "common-standards-project",
+  hostname: "localhost"
